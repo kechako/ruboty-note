@@ -20,7 +20,7 @@ module Ruboty
         end
 
         def create_channel_noting
-          noting[channel] = []
+          noting[channel] = {title: 'Untitled', note: []}
         end
 
         def delete_channel_noting

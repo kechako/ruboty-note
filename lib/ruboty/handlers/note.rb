@@ -6,9 +6,9 @@ require 'ruboty/note/actions/show'
 module Ruboty
   module Handlers
     class Note < Ruboty::Handlers::Base
-      on /note\s+stop/i, name: :stop, description: 'Stop note.'
+      on /note\s+stop(\s+(?<title>.+))?/i, name: :stop, description: 'Stop note.'
       on /(.*)/i, name: :note, all: true
-      on /note\s+start/i, name: :start, description: 'Start note.'
+      on /note\s+start(\s+(?<title>.+))?/i, name: :start, description: 'Start note.'
       on /note\s+show\s+(\d+)/i, name: :show, description: 'Show note.'
 
       def start(message)

@@ -8,9 +8,9 @@ module Ruboty
           if note.nil?
             message.reply("Note #{number} is not found.")
           else
-            reply = []
+            reply = [note[:title], '']
             prev_name = nil
-            note.each do |msg|
+            note[:note].each do |msg|
               name, body = msg[:name], msg[:body]
 
               unless name == prev_name

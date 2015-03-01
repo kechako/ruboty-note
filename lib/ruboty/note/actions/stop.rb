@@ -8,6 +8,7 @@ module Ruboty
           if channel_noting.nil? || robot?
             message.reply('Not started.')
           else
+            channel_noting[:title] = message[:title] if message[:title]
             number = notes.push(channel_noting).size - 1
             delete_channel_noting
             message.reply("Stop note. Note #{number} is saved.")

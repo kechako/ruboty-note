@@ -5,8 +5,8 @@ An ruboty handler to note toking.
 ## Installation
 
 ```
-@ruboty note start              - start to note
-@ruboty note stop               - stop to note
+@ruboty note start [note title] - start to note
+@ruboty note stop [note title]  - stop to note
 @ruboty note show [note number] - show note
 ```
 

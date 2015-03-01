@@ -6,7 +6,7 @@ module Ruboty
       class Note < Ruboty::Note::Actions::Base
         def call
           unless channel_noting.nil? || robot?
-            channel_noting << {name: message.from_name, body: message.body}
+            channel_noting[:note] << {name: message.from_name, body: message.body}
           end
         end
       end
