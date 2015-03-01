@@ -1,0 +1,1 @@
+require "ruboty/note/version"
